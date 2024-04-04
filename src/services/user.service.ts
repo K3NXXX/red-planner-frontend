@@ -19,6 +19,7 @@ class UserService {
   }
 
   async update(data: TypeUserForm) {
+    //@ts-ignore
     const response = await axiosWithAuth(this.BASE_URL, data);
     return response.data;
   }
