@@ -1,8 +1,8 @@
 "use client";
 
-import { useQuery } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query"
 
-import { userService } from "@/services/user.service";
+import { userService } from "@/services/user.service"
 
 export function useProfile() {
   const { data, isLoading } = useQuery({
