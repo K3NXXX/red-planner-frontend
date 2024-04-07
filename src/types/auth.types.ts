@@ -9,7 +9,7 @@ export interface IUser {
   email: string;
   workInterval: number;
   breakInterval: number;
-  intervalCount: number;
+  intervalsCount: number;
 }
 
 export interface IAuthResponse {
