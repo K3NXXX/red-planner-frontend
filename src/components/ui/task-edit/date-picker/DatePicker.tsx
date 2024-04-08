@@ -3,7 +3,9 @@ import dayjs from "dayjs";
 import LocalizedFormat from "dayjs/plugin/localizedFormat";
 import { X } from "lucide-react";
 import { useState } from "react";
-import { DayPicker } from "react-day-picker";
+import { DayPicker, SelectSingleEventHandler } from "react-day-picker";
+
+import { useOutside } from "@/hooks/useOutside";
 
 import { formatCaption } from "./DatePickerCaption";
 
