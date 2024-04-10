@@ -6,6 +6,7 @@ import { taskService } from "@/services/task.service";
 
 export function useCreateTask() {
   const queryClient = useQueryClient();
+
   const { mutate: createTask } = useMutation({
     mutationKey: ["create task"],
     mutationFn: (data: TypeTaskFormState) => taskService.createTask(data),

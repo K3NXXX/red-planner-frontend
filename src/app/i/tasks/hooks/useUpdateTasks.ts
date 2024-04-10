@@ -17,5 +17,6 @@ export function useUpdateTasks(key?: string) {
       });
     },
   });
+
   return { updateTask };
 }

@@ -6,6 +6,7 @@ import { useUpdateTasks } from "./useUpdateTasks";
 
 export function useTaskDnd() {
   const { updateTask } = useUpdateTasks();
+
   const onDragEnd = (result: DropResult) => {
     if (!result.destination) return;
 
@@ -20,10 +21,12 @@ export function useTaskDnd() {
           isCompleted: true,
         },
       });
+
       return;
     }
 
     const newCreatedAt = FILTERS[destinationColumnId].format();
+
     updateTask({
       id: result.draggableId,
       data: {
@@ -32,5 +35,6 @@ export function useTaskDnd() {
       },
     });
   };
+
   return { onDragEnd };
 }
