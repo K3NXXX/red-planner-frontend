@@ -17,7 +17,7 @@ import styles from "./ListView.module.scss";
 
 interface IListRow {
   item: ITaskRepsonse;
-  setItems: Dispatch<SetStateAction<ITaskRepsonse[]>>;
+  setItems: Dispatch<SetStateAction<ITaskRepsonse[] | undefined>>;
 }
 export function ListRow({ item, setItems }: IListRow) {
   const { deleteTask, isDeletePending } = useDeleteTask();
