@@ -5,6 +5,7 @@ import { Pause, Play, RefreshCcw } from "lucide-react";
 import Loader from "@/components/ui/Loader";
 import { Button } from "@/components/ui/buttons/Button";
 
+import styles from "./Pomodoro.module.scss";
 import { formatTime } from "./format-time";
 import { useCreateSession } from "./hooks/useCreateSession";
 import { useDeleteSession } from "./hooks/useDeleteSession";
@@ -27,9 +28,9 @@ export function Pomodoro() {
   );
 
   return (
-    <div className="relative w-80 text-center">
+    <div className={styles.root}>
       {!isLoading && (
-        <div className="text-7xl font-semibold">
+        <div className={styles.secondsLeft}>
           {formatTime(timerState.secondsLeft)}
         </div>
       )}
