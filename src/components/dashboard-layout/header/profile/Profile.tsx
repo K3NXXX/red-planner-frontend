@@ -4,6 +4,8 @@ import Loader from "@/components/ui/Loader";
 
 import { useProfile } from "@/hooks/useProfile";
 
+import styles from "./Profile.module.scss";
+
 export function Profile() {
   const { data, isLoading } = useProfile();
   return (
@@ -14,7 +16,7 @@ export function Profile() {
         <div className="flex items-center">
           <div className="text-right mr-3">
             <p className="font-bold -mb-1">{data?.user.name}</p>
-            <p className="text-sm opacity-40">{data?.user.email}</p>
+            <p className={styles.email}>{data?.user.email}</p>
           </div>
 
           <div

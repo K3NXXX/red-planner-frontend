@@ -1,0 +1,7 @@
+.email {
+  font-size: 1.07rem;
+  opacity: 0.4;
+  @media (max-width: 453px) {
+    display: none;
+  }
+}

@@ -8,7 +8,7 @@ export function GlobalLoader() {
   const isMutating = useIsMutating();
   const isFetching = useIsFetching();
   return isFetching || isMutating ? (
-    <div className="fixed top-layout right-layout z-50">
+    <div className="fixed top-2 right-2 z-50">
       <Loader />
     </div>
   ) : null;
