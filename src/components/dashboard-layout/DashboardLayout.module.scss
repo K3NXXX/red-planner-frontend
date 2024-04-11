@@ -1,0 +1,14 @@
+.pc {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1.2fr 6fr;
+  @media (max-width: 900px) {
+    display: none;
+  }
+}
+.phone {
+  display: none;
+  @media (max-width: 900px) {
+    display: block;
+  }
+}

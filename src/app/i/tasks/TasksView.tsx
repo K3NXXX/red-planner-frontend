@@ -3,5 +3,9 @@
 import { ListView } from "./list-view/ListView";
 
 export function TasksView() {
-  return <ListView />;
+  return (
+    <div className="pb-20">
+      <ListView />
+    </div>
+  );
 }

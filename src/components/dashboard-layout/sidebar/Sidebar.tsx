@@ -7,9 +7,10 @@ import { DASHBOARD_PAGES } from "@/config/pages-url.config";
 
 import { LogoutButton } from "./LogoutButton";
 import { MenuItem } from "./MenuItem";
+import styles from "./Sidebar.module.scss";
 import { MENU } from "./menu.data";
 
-export function Sibebar() {
+export function Sidebar() {
   return (
     <aside
       className="border-r border-r-border h-full bg-sidebar flex
@@ -18,11 +19,11 @@ export function Sibebar() {
       <div>
         <Link
           href={DASHBOARD_PAGES.HOME}
-          className="flex items-center gap-2.5 p-layout border-b border-b-border"
+          className={styles.link}
           draggable={false}
         >
           <GanttChartSquare color={COLORS.primary} size={30} />
-          <span className="text-2xl font-bold relavite">RED Planner</span>
+          <span>RED Planner</span>
         </Link>
         <div className="p-3 relative pt-10">
           <LogoutButton />
