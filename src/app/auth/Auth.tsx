@@ -17,7 +17,12 @@ import { DASHBOARD_PAGES } from "@/config/pages-url.config";
 import { authService } from "@/services/auth.service";
 
 export function Auth() {
-  const { register, handleSubmit, reset } = useForm<IAuthForm>({
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<IAuthForm>({
     mode: "onChange",
   });
 
@@ -66,9 +71,18 @@ export function Auth() {
           type="password"
           {...register("password", {
             required: "Password is required!",
+            minLength: {
+              value: 6,
+              message: "Password minimum 6 characters",
+            },
           })}
           extra="mb-6"
         />
+        {errors.password && (
+          <p className="text-red-500 font-bold mb-2">
+            {errors.password.message}
+          </p>
+        )}
 
         <div className="flex items-center gap-5 justify-center">
           <Button onClick={() => setIsLoginForm(true)}>Login</Button>
