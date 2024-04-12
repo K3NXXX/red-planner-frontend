@@ -4,7 +4,7 @@ import { BottomBarItem } from "./BottomBarItem";
 
 export function BottomBar() {
   return (
-    <div className="fixed flex gap-2 bottom-2 justify-center w-full z-50 ">
+    <div className="fixed flex gap-2 bottom-2 justify-center w-full z-40 ">
       {MENU.map((item) => (
         <BottomBarItem item={item} key={item.link} />
       ))}

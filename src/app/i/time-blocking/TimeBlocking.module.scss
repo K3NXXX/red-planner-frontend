@@ -1,23 +1,120 @@
-.list {
-	.block {
-		@apply rounded mb-3 p-4 relative flex items-center justify-between text-sm;
+.root {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem;
 
-		&:active,
-		&:hover {
-			.grip {
-				@apply opacity-100;
-			}
-		}
-	}
+  min-height: 550px;
+  @media (max-width: 637px) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.form {
+  width: 500px;
+  padding-bottom: 50px;
+  @media (max-width: 1400px) {
+    width: 400px;
+  }
+  @media (max-width: 1100px) {
+    width: 300px;
+  }
+  @media (max-width: 371px) {
+    width: 250px;
+  }
+}
+
+.item {
+  display: flex;
+  @media (max-width: 1300px) {
+  }
+}
+
+.edit {
+  opacity: 0.5;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 266ms;
+  margin-right: 0.5rem /* 8px */;
+  &:hover {
+    opacity: 1;
+  }
+  @media (max-width: 1300px) {
+    position: absolute;
+    top: 5px;
+    right: 30px;
+  }
+}
+.delete {
+  opacity: 0.5;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 266ms;
+  margin-right: 0.5rem /* 8px */;
+  &:hover {
+    opacity: 1;
+  }
+  @media (max-width: 1300px) {
+    position: absolute;
+    top: 5px;
+    right: 0;
+  }
+}
+
+.text {
+  overflow-wrap: break-word;
+  @media (max-width: 1950px) {
+    max-width: 500px;
+  }
+  @media (max-width: 1625px) {
+    max-width: 400px;
+  }
+  @media (max-width: 1400px) {
+    max-width: 300px;
+  }
+  @media (max-width: 953px) {
+    padding: 10px;
+    max-width: 200px;
+  }
+  @media (max-width: 637px) {
+    max-width: 400px;
+    padding: 0;
+  }
+  @media (max-width: 500px) {
+    max-width: 300px;
+  }
+  @media (max-width: 410px) {
+    max-width: 220px;
+    padding-top: 20px;
+  }
+}
+.list {
+  .block {
+    @apply rounded mb-3 p-4 relative flex items-center justify-between text-sm;
+
+    &:active,
+    &:hover {
+      .grip {
+        @apply opacity-100;
+      }
+    }
+  }
 }
 
 .grip {
-	@apply opacity-25 transition-opacity -ml-1 mr-0.5;
+  opacity: 0.25;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 266ms;
 
-	&:hover,
-	&:active {
-		.grip {
-			@apply opacity-100;
-		}
-	}
+  &:hover,
+  &:active {
+    .grip {
+      opacity: 1;
+    }
+  }
+  @media (max-width: 1300px) {
+    position: absolute;
+    top: 5px;
+    left: 0;
+  }
 }

@@ -9,9 +9,10 @@ import type { TypeTimeBlockFormState } from "@/types/time-blocks";
 import { COLORS } from "./colors.data";
 import { useCreateTimeBlock } from "./useCreateTimeBlock";
 import { useUpdateTimeBlock } from "./useUpdateTimBlock";
+import styles from "@/app/i/time-blocking/TimeBlocking.module.scss";
 
 export function TimeBlockingForm() {
-  const { register, control, watch, reset, handleSubmit, getValues } =
+  const { register, control, watch, reset, handleSubmit } =
     useFormContext<TypeTimeBlockFormState>();
 
   const existsId = watch("id");
@@ -42,7 +43,7 @@ export function TimeBlockingForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="w-3/5">
+    <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
       <Field
         {...register("name", {
           required: true,
