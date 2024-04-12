@@ -8,7 +8,7 @@ import { TransparentField } from "@/components/ui/fileds/TransparentField";
 import { SingleSelect } from "@/components/ui/task-edit/SingleSelect";
 import { DatePicker } from "@/components/ui/task-edit/date-picker/DatePicker";
 
-import type { ITaskRepsonse, TypeTaskFormState } from "@/types/task.types";
+import type { ITaskResponse, TypeTaskFormState } from "@/types/task.types";
 
 import { useDeleteTask } from "../hooks/useDeleteTask";
 import { useTaskDebounce } from "../hooks/useTaskDebounce";
@@ -16,8 +16,8 @@ import { useTaskDebounce } from "../hooks/useTaskDebounce";
 import styles from "./ListView.module.scss";
 
 interface IListRow {
-  item: ITaskRepsonse;
-  setItems: Dispatch<SetStateAction<ITaskRepsonse[] | undefined>>;
+  item: ITaskResponse;
+  setItems: Dispatch<SetStateAction<ITaskResponse[] | undefined>>;
 }
 export function ListRow({ item, setItems }: IListRow) {
   const { deleteTask, isDeletePending } = useDeleteTask();
@@ -81,7 +81,7 @@ export function ListRow({ item, setItems }: IListRow) {
           )}
         />
       </div>
-      <div>
+      <div className={styles.delete}>
         <button
           onClick={() => {
             item.id

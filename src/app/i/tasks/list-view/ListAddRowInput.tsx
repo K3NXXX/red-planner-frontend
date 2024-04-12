@@ -1,12 +1,12 @@
 import { Dispatch, SetStateAction } from "react";
 
-import { ITaskRepsonse } from "@/types/task.types";
+import { ITaskResponse } from "@/types/task.types";
 
 import styles from "./ListView.module.scss";
 
 interface IListAddRowInput {
   filterDate?: string;
-  setItems: Dispatch<SetStateAction<ITaskRepsonse[] | undefined>>;
+  setItems: Dispatch<SetStateAction<ITaskResponse[] | undefined>>;
 }
 
 export function ListAddRowInput({ setItems, filterDate }: IListAddRowInput) {

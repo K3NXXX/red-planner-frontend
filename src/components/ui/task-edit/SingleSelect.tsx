@@ -53,7 +53,7 @@ export function SingleSelect({
       </button>
       {value && (
         <button
-          className="absolute -top-3 -right-2 opacity-30 hover:opacity-100 transition-opacity"
+          className="absolute top-2 right-1 opacity-30 hover:opacity-100 transition-opacity"
           onClick={(e) => {
             e.preventDefault();
             onChange(" ");

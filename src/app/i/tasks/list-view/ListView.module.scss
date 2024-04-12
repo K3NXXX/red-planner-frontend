@@ -3,6 +3,9 @@
 
   .header {
     @apply grid grid-cols-[1.4fr_.4fr_.4fr_.1fr];
+    @media (max-width: 700px) {
+      display: none;
+    }
   }
 
   .header,
@@ -11,11 +14,16 @@
     @apply rounded border-t border-border text-left w-auto whitespace-nowrap;
 
     > div {
-      @apply border-r border-border py-2 px-4;
+      @apply border border-border py-3 px-4 rounded;
 
       &:last-child {
         @apply border-0;
       }
+    }
+  }
+  .delete {
+    @media (max-width: 700px) {
+      border: 1px solid rgba(255, 255, 255, 0.12);
     }
   }
 
@@ -35,7 +43,11 @@
 
     .row {
       @apply font-normal grid grid-cols-[1.4fr_.4fr_.4fr_.1fr] relative;
-
+      @media (max-width: 700px) {
+        display: flex;
+        flex-direction: column;
+        gap: 5px 0;
+      }
       &.completed {
         > div > span > input {
           @apply italic line-through opacity-50;

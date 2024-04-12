@@ -1,7 +1,7 @@
 import { Draggable, Droppable } from "@hello-pangea/dnd";
 import { Dispatch, SetStateAction } from "react";
 
-import { ITaskRepsonse } from "@/types/task.types";
+import { ITaskResponse } from "@/types/task.types";
 
 import { FILTERS } from "../column.data";
 import { filterTasks } from "../filter-tasks";
@@ -13,8 +13,8 @@ import styles from "./ListView.module.scss";
 interface IListRowParent {
   value: string;
   label: string;
-  items: ITaskRepsonse[] | undefined;
-  setItems: Dispatch<SetStateAction<ITaskRepsonse[] | undefined>>;
+  items: ITaskResponse[] | undefined;
+  setItems: Dispatch<SetStateAction<ITaskResponse[] | undefined>>;
 }
 export function ListRowParent({
   value,
