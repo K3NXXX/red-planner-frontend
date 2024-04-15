@@ -8,7 +8,7 @@ import {
 import { authService } from "@/services/auth.service";
 
 const options: CreateAxiosDefaults = {
-  baseURL: "https://red-planner-backend.vercel.app/api",
+  baseURL: "http://localhost:4200/api",
   headers: {
     "Content-Type": "application/json",
   },
